@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Source+Sans+Pro:wght@300;400;700&display=swap");
+
+//COLORS
+$dark: #02182b;
+$lightgrey: #e5e5e5;
+$grey: #444;
+$red: #da0037;
+$red-hover: #8a0526;
+$blue: #3454d1;
+$blue-active: #2b44aa;
+$yellow: #fca311;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+    url(../images/bg.jpg);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  background-color: $blue;
+
+  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+
+  
+  nav {
+      position: fixed;
+      width: 100%;
+      
+    .logo {
+      position: absolute;
+      top: 0;
+      width: 60px;
+      margin: 2% 3%;
+      z-index: 2;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    ul.show {
+      position: absolute;
+      width: 100%;
+      opacity: 1;
+      text-align: center;
+      vertical-align: middle;
+      transition: 3s;
+      .centered {
+        opacity: 0;
+      }
+      .center {
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 1s;
+        li {
+          list-style: none;
+          font-weight: 700;
+          font-size: 1.2rem;
+          margin: 90% 0;
+
+          a {
+            color: white;
+            text-decoration: none;
+
+            &:active {
+              color: $dark;
+            }
+          }
+        }
+      }
+    }
+  }
+  .contact {
+    opacity: 0;
+  }
+
+  .container {
+    .web-dev {
+      opacity: 0.5;
+      color: $lightgrey;
+      font-weight: 300;
+      font-size: 0.8em;
+      margin-top: 15%;
+    }
+
+    h1,
+    h2,
+    p {
+      color: white;
+      text-align: left;
+      margin: 2% 2% 0 5%;
+    }
+
+    .info {
+      position: relative;
+      h2 {
+        font-size: 1.3rem;
+        margin-bottom: 11%;
+      }
+      .anas {
+        font-size: 110%;
+      }
+
+      .the-samoudi {
+        position: absolute;
+        top: 40%;
+        font-family: "Montserrat", sans-serif;
+        color: $blue;
+        font-size: 450%;
+        margin: 0% 2% 0 5%;
+      }
+    }
+
+    .description {
+      max-width: 65%;
+    }
+    .flex-container {
+      display: flex;
+      .cta {
+        opacity: 1;
+        color: white;
+        font-size: 1em;
+        font-weight: 500;
+        margin: 8% 5%;
+        background-color: $blue;
+        padding: 3% 6%;
+        border-radius: 5px;
+        border: transparent;
+
+        &:active {
+          background-color: $blue-active;
+        }
+      }
+      .portfolio {
+        opacity: 1;
+        color: white;
+        font-size: 1em;
+        font-weight: 500;
+        display: flex;
+        background-color: transparent;
+        padding: 3% 4%;
+        border-radius: 10px;
+
+        box-sizing: border-box;
+        border: 2px solid $blue;
+        margin: 8% 0;
+        white-space: nowrap;
+        &:active {
+          background-color: $blue;
+        }
+      }
+    }
+  }
+  .show {
+    position: absolute;
+    width: 100%;
+    background-image: linear-gradient(
+        rgba(52, 84, 209, 0.7),
+        rgba(52, 84, 209, 0.9)
+      ),
+      url(../images/bg.jpg);
+
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    z-index: 1;
+    height: 100vh;
+
+    transition: 1s;
+  }
+  .opacity-change {
+    opacity: 1;
+  }
+
+  .scroll-down {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 0.8rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+    &::before {
+      content: url(../images/mouse.svg);
+      display: block;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      bottom: 130%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+.centered {
+  opacity: 0;
+}
+.menu-icon {
+  position: absolute;
+  top: 3%;
+  display: inline-block;
+  cursor: pointer;
+  margin: 3% 6%;
+  z-index: 2;
+  right: 0;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+@media screen and(min-width:900px) {
+  header {
+    nav {
+      ul {
+        width: 100%;
+        opacity: 1;
+
+        .centered {
+          opacity: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          li {
+            opacity: 1;
+            list-style: none;
+            font-weight: 700;
+            font-size: 1rem;
+            margin: 3% 3%;
+
+            a {
+              color: white;
+              text-decoration: none;
+              &:hover {
+                color: $blue;
+              }
+            }
+          }
+
+          .opacity-change {
+            opacity: 0;
+            position: absolute;
+          }
+          .menu {
+            .contact {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      .menu-icon {
+        opacity: 0;
+      }
+    }
+
+    .contact {
+      position: absolute;
+      top: 0;
+      display: inline-block;
+      cursor: pointer;
+      right: 0;
+      opacity: 1;
+      color: white;
+      font-size: 1rem;
+      font-weight: 700;
+      margin:2% 3%;
+      background-color: $blue;
+      padding: 1% 2%;
+      border-radius: 10px;
+      border: transparent;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $blue-active;
+      }
+
+      
+    }
+
+    .container {
+      .web-dev {
+        margin-top: 20%;
+      }
+      .info {
+        .anas {
+          font-size: 120%;
+        }
+
+        .the-samoudi {
+          font-size: 680%;
+        }
+        margin-top: 0;
+        h2 {
+          font-size: 2rem;
+          margin-top: 1%;
+          margin-bottom: 7%;
+        }
+      }
+      .description {
+        margin: 0% 5%;
+        max-width: 35%;
+      }
+     .flex-container{
+        .cta {
+            margin: 3% 3% 3% 5%;
+            padding: 1% 3%;
+            &:hover {
+              cursor: pointer;
+              background-color: $blue-active;
+            }
+          }
+          .portfolio {
+            margin: 3% 3% 3% 0;
+            padding: 1% 3%;
+            &:hover {
+              cursor: pointer;
+              background-color: $blue;
+            }
+          }
+     }
+    }
+  }
+
+
+  section{
+    position: absolute;
+      
+    width: 100%;
+    height: 100vh;
+    top: 100vh;
+    background-image: linear-gradient(
+      
+      rgba(0, 0, 0, 0.9),
+        rgba(52, 84, 209, 0.5)
+        
+        
+        
+      ),
+        url(../images/about-bg.jpg);
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+
+      .about-info{
+        color: white;
+        
+        margin-left:5%;
+        max-width: 40%;
+        ul{
+          li{
+            list-style: none;
+            &::before{
+              content: url(../images/right-arrow.svg);
+              display: inline-block;
+              vertical-align: middle;
+              width: 20px;
+              margin-right: 2%;
+              margin-top: 1%;
+            }
+          }
+        }
+      }
+      .about-photo{
+       background-color: $blue;
+       width:30vh;
+       height: 35vh;
+        box-shadow: 0 0 15px  rgba(0, 0, 0, 0.2);
+        margin-left:8%;
+        margin-right:8%;
+        position: relative;
+        img{
+          position: absolute;
+          bottom: 0;
+          
+          
+          display: block;
+          text-align:center;
+          
+          width: 100%;
+        }
+       
+      }
+  }
+}
+
+@media screen and(max-width:450px) {
+  header {
+    .container {
+      .info {
+        h2 {
+          margin-bottom: 20%;
+        }
+      }
+    }
+  }
+}
+

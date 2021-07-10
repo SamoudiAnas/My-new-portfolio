@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Source+Sans+Pro:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.7))), url(../images/bg.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../images/bg.jpg);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  background-color: #3454d1;
+  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+header nav {
+  position: fixed;
+  width: 100%;
+}
+
+header nav .logo {
+  position: absolute;
+  top: 0;
+  width: 60px;
+  margin: 2% 3%;
+  z-index: 2;
+}
+
+header nav .logo:hover {
+  cursor: pointer;
+}
+
+header nav ul.show {
+  position: absolute;
+  width: 100%;
+  opacity: 1;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+
+header nav ul.show .centered {
+  opacity: 0;
+}
+
+header nav ul.show .center {
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+header nav ul.show .center li {
+  list-style: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 90% 0;
+}
+
+header nav ul.show .center li a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav ul.show .center li a:active {
+  color: #02182b;
+}
+
+header .contact {
+  opacity: 0;
+}
+
+header .container .web-dev {
+  opacity: 0.5;
+  color: #e5e5e5;
+  font-weight: 300;
+  font-size: 0.8em;
+  margin-top: 15%;
+}
+
+header .container h1,
+header .container h2,
+header .container p {
+  color: white;
+  text-align: left;
+  margin: 2% 2% 0 5%;
+}
+
+header .container .info {
+  position: relative;
+}
+
+header .container .info h2 {
+  font-size: 1.3rem;
+  margin-bottom: 11%;
+}
+
+header .container .info .anas {
+  font-size: 110%;
+}
+
+header .container .info .the-samoudi {
+  position: absolute;
+  top: 40%;
+  font-family: "Montserrat", sans-serif;
+  color: #3454d1;
+  font-size: 450%;
+  margin: 0% 2% 0 5%;
+}
+
+header .container .description {
+  max-width: 65%;
+}
+
+header .container .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .container .flex-container .cta {
+  opacity: 1;
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+  margin: 8% 5%;
+  background-color: #3454d1;
+  padding: 3% 6%;
+  border-radius: 5px;
+  border: transparent;
+}
+
+header .container .flex-container .cta:active {
+  background-color: #2b44aa;
+}
+
+header .container .flex-container .portfolio {
+  opacity: 1;
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: transparent;
+  padding: 3% 4%;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #3454d1;
+  margin: 8% 0;
+  white-space: nowrap;
+}
+
+header .container .flex-container .portfolio:active {
+  background-color: #3454d1;
+}
+
+header .show {
+  position: absolute;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 84, 209, 0.7)), to(rgba(52, 84, 209, 0.9))), url(../images/bg.jpg);
+  background-image: linear-gradient(rgba(52, 84, 209, 0.7), rgba(52, 84, 209, 0.9)), url(../images/bg.jpg);
+  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  z-index: 1;
+  height: 100vh;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+header .opacity-change {
+  opacity: 1;
+}
+
+header .scroll-down {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: white;
+  font-size: 0.8rem;
+}
+
+header .scroll-down:hover {
+  cursor: pointer;
+}
+
+header .scroll-down::before {
+  content: url(../images/mouse.svg);
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.centered {
+  opacity: 0;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 3%;
+  display: inline-block;
+  cursor: pointer;
+  margin: 3% 6%;
+  z-index: 2;
+  right: 0;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+@media screen and (min-width: 900px) {
+  header nav ul {
+    width: 100%;
+    opacity: 1;
+  }
+  header nav ul .centered {
+    opacity: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header nav ul .centered li {
+    opacity: 1;
+    list-style: none;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 3% 3%;
+  }
+  header nav ul .centered li a {
+    color: white;
+    text-decoration: none;
+  }
+  header nav ul .centered li a:hover {
+    color: #3454d1;
+  }
+  header nav ul .centered .opacity-change {
+    opacity: 0;
+    position: absolute;
+  }
+  header nav ul .centered .menu .contact {
+    opacity: 1;
+  }
+  header nav .menu-icon {
+    opacity: 0;
+  }
+  header .contact {
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    cursor: pointer;
+    right: 0;
+    opacity: 1;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 2% 3%;
+    background-color: #3454d1;
+    padding: 1% 2%;
+    border-radius: 10px;
+    border: transparent;
+  }
+  header .contact:hover {
+    cursor: pointer;
+    background-color: #2b44aa;
+  }
+  header .container .web-dev {
+    margin-top: 20%;
+  }
+  header .container .info {
+    margin-top: 0;
+  }
+  header .container .info .anas {
+    font-size: 120%;
+  }
+  header .container .info .the-samoudi {
+    font-size: 680%;
+  }
+  header .container .info h2 {
+    font-size: 2rem;
+    margin-top: 1%;
+    margin-bottom: 7%;
+  }
+  header .container .description {
+    margin: 0% 5%;
+    max-width: 35%;
+  }
+  header .container .flex-container .cta {
+    margin: 3% 3% 3% 5%;
+    padding: 1% 3%;
+  }
+  header .container .flex-container .cta:hover {
+    cursor: pointer;
+    background-color: #2b44aa;
+  }
+  header .container .flex-container .portfolio {
+    margin: 3% 3% 3% 0;
+    padding: 1% 3%;
+  }
+  header .container .flex-container .portfolio:hover {
+    cursor: pointer;
+    background-color: #3454d1;
+  }
+  section {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 100vh;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(52, 84, 209, 0.5))), url(../images/about-bg.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(52, 84, 209, 0.5)), url(../images/about-bg.jpg);
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section .about-info {
+    color: white;
+    margin-left: 5%;
+    max-width: 40%;
+  }
+  section .about-info ul li {
+    list-style: none;
+  }
+  section .about-info ul li::before {
+    content: url(../images/right-arrow.svg);
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    margin-right: 2%;
+    margin-top: 1%;
+  }
+  section .about-photo {
+    background-color: #3454d1;
+    width: 30vh;
+    height: 35vh;
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-left: 8%;
+    margin-right: 8%;
+    position: relative;
+  }
+  section .about-photo img {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header .container .info h2 {
+    margin-bottom: 20%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
